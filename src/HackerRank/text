@@ -1,0 +1,155 @@
+package HackerRank;
+
+import java.io.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class TimeConversion {
+
+    public static String timeConversion(String s) throws ParseException {
+        // Write your code here
+        try {
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("hh:mm:ssa");
+
+            Date date = simpleDateFormat.parse(s);
+            String hours = "";
+            String minutes = "";
+            String seconds = "";
+            if (date.getHours() < 10) {
+                hours = "0" + date.getHours();
+                String result = hours + ":" + date.getMinutes() + ":" + date.getSeconds();
+                System.out.println(result);
+                return result;
+            } else if (date.getMinutes() < 10) {
+                minutes = "0" + date.getMinutes();
+                String result =  date.getHours() + ":" + minutes + ":" + date.getSeconds();
+                System.out.println(result);
+                return result;
+            } else if (date.getSeconds() < 10 ) {
+                if(date.getSeconds()==0){
+                    System.out.println("if");
+                    seconds = "00"+ date.getSeconds();
+                    String result = date.getHours() + ":" + date.getMinutes() + ":" + seconds;
+                    System.out.println(result);
+                    return result;
+                }else {
+                    System.out.println("else");
+                seconds = "0" + date.getSeconds();
+                    String result = date.getHours() + ":" + date.getMinutes() + ":" + seconds;
+                    System.out.println(result);
+                    return result;
+                }
+            } else {
+;               String result =  date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+                System.out.println(result);
+                return result;
+            }
+        }catch (ParseException e){
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public static void main(String[] args) throws IOException, IOException, ParseException {
+        String time = "00:00:00PM";
+
+        timeConversion(time);
+
+
+    }
+//        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+//        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+//
+//        String s = bufferedReader.readLine();
+//
+//        String result = TimeConversion.timeConversion(s);
+//
+//        bufferedWriter.write(result);
+//        bufferedWriter.newLine();
+//
+//        bufferedReader.close();
+//        bufferedWriter.close();
+//    }
+}
+
+
+
+
+
+
+
+
+
+
+package HackerRank;
+
+import java.io.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class TimeConversion {
+
+    public static String timeConversion(String s) throws ParseException {
+        // Write your code here
+        try {
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("hh:mm:ssa");
+
+            Date date = simpleDateFormat.parse(s);
+            String hours = "";
+            String minutes = "";
+            String seconds = "";
+            if (date.getHours() < 10) {
+                System.out.println("hours");
+                if (date.getMinutes() < 10) {
+                    System.out.println("minutes");
+                    if (date.getSeconds() < 10) {
+                        System.out.println("sec");
+                        seconds = "0" + date.getSeconds();
+                        if (date.getSeconds() == 0) {
+                            System.out.println("if");
+                            seconds = "0" + date.getSeconds();
+                        }
+                    }
+                    minutes = "0" + date.getMinutes();
+                }
+                hours = "0" + date.getHours();
+                String result = hours + ":" + minutes + ":" + seconds;
+                System.out.println(result);
+                return result;
+
+            } else {
+                ;
+                String result = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+                System.out.println(result);
+                return result;
+            }
+        } catch (ParseException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public static void main(String[] args) throws IOException, IOException, ParseException {
+        String time = "7:5:45PM";
+
+        timeConversion(time);
+
+
+    }
+//        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+//        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+//
+//        String s = bufferedReader.readLine();
+//
+//        String result = TimeConversion.timeConversion(s);
+//
+//        bufferedWriter.write(result);
+//        bufferedWriter.newLine();
+//
+//        bufferedReader.close();
+//        bufferedWriter.close();
+//    }
+}
+
