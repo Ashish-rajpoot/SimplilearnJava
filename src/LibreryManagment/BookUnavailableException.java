@@ -1,4 +1,4 @@
-package MamDoc;
+package LibreryManagment;
 
 public class BookUnavailableException extends Exception{
 

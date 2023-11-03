@@ -1,4 +1,4 @@
-package MamDoc;
+package LibreryManagment;
 
 public class Book {
     private String name;
@@ -6,6 +6,10 @@ public class Book {
     private String author;
     private String issuedBy;
     private boolean available;
+
+    public Book(){
+
+    }
 
     public String getName() {
         return name;

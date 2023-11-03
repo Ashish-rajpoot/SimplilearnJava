@@ -52,8 +52,12 @@ public class BufferedReaderDemo {
 
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         String  str = bufferedReader.readLine();
-        int ints = bufferedReader.read();
-        System.out.println(str instanceof String);
-        System.out.println(ints );
+        String str2 = str.trim();
+
+        System.out.println(str.replace(" ",","));
+        System.out.println(str.toString());
+//        int ints = bufferedReader.read();
+//        System.out.println(str instanceof String);
+//        System.out.println(ints );
     }
 }
