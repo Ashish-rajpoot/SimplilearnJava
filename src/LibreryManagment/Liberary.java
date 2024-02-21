@@ -15,14 +15,14 @@ public class Liberary {
         if (!isAvaliable) {
             throw new BookUnavailableException("Book is unavailable");
         } else {
-//          Book book =  new Book(details.getName(), details.getAuthor(), details.getIfsc(), name, false);
-            Book book = new Book();
-            book.setName(details.getName());
-            book.setAuthor(details.getAuthor());
-            book.setIfsc(details.getIfsc());
-            book.setIssuedBy(name);
-            book.setAvailable(false);
-            validateIFSC(book);
+          Book book =  new Book(details.getName(), details.getAuthor(), details.getIfsc(), name, false);
+//            Book book = new Book();
+//            book.setName(details.getName());
+//            book.setAuthor(details.getAuthor());
+//            book.setIfsc(details.getIfsc());
+//            book.setIssuedBy(name);
+//            book.setAvailable(false);
+//            validateIFSC(book);
             return "Book is Issued succcessfully";
         }
     }

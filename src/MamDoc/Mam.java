@@ -13,10 +13,10 @@ public class Mam {
 
     //Problem 2:
 
-    public static void stockProblem() throws StockLowException, StockHighException {
+    public static String  stockProblem() throws StockLowException, StockHighException {
         Stock stock = new Stock();
-        stock.setStockRate(79.0f);
-        stock.checkRate(70.0f);
+        stock.setStockRate(100.0f);
+        return stock.checkRate(80.0f);
     }
 
 
@@ -47,7 +47,7 @@ public class Mam {
 //        insertSpaces("hello");
 //        removeFirstAndLast("codecode", "e");
 //        bookRunner();
-//        stockProblem();
+        System.out.println( stockProblem());
 //        String str = "abc";
 //        System.out.println(str.substring(1));
 //        Problem1 problem1 = new Problem1();

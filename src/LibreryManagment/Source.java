@@ -24,7 +24,7 @@ public class Source {
 //        }else {
 //            Book book = new Book(name, ifsc, author, isAvailable);
             String str1 = validateIFSC(book);
-            String str2 = issueBook(book, "Steve");
+            String str2 = issueBook(book, "Arthashast");
             System.out.println(str1);
             System.out.println(str2);
 //        }

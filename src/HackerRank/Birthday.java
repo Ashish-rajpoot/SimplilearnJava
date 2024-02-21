@@ -34,6 +34,7 @@ public class Birthday {
 
         }
     }
+        System.out.println(count);
         return count;
 }
 

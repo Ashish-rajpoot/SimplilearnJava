@@ -3,6 +3,8 @@ package Revision;
 public class GcfAndLcm {
 
     static int gcf(int x , int y){
+//         4,2
+//        (2,4%2)
         if(y == 0){
             return x;
         }
